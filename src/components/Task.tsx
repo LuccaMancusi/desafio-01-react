@@ -4,31 +4,37 @@ import trash from "..//assets/trash.svg";
 import styles from "./Task.module.css";
 import { useState } from "react";
 
+interface Task {
+  id: string;
+  content: string;
+  isChecked: boolean;
+}
 interface TaskProps {
-  taskContent: string;
-  key: string;
+  task: Task;
+  onDeleteTask: (id: string) => void;
+  onCheckTaskOnList: (id: string) => void;
 }
 
-export function Task({ taskContent, key }: TaskProps) {
-  const [isChecked, setIsChecked] = useState(false);
-
+export function Task({ task, onDeleteTask, onCheckTaskOnList }: TaskProps) {
   function handleCheckButton() {
-    setIsChecked((state) => {
-      return !state;
-    });
+    onCheckTaskOnList(task.id);
+  }
+
+  function handleDeleteTask() {
+    onDeleteTask(task.id);
   }
 
   return (
     <div className={styles.taskCard}>
       <div className={styles.checkAndText}>
         <button onClick={handleCheckButton}>
-          <img src={isChecked ? checked : unchecked} />
+          <img src={task.isChecked ? checked : unchecked} />
         </button>
-        <p className={isChecked ? styles.checked : styles.unchecked}>
-          {taskContent}
+        <p className={task.isChecked ? styles.checked : styles.unchecked}>
+          {task.content}
         </p>
       </div>
-      <button>
+      <button onClick={handleDeleteTask}>
         <img src={trash} />
       </button>
     </div>
