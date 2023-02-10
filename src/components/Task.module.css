@@ -1,18 +1,24 @@
 .taskCard {
-  color: white;
   display: flex;
   gap: 0.75rem;
   background-color: var(--gray-500);
   border-radius: 8px;
   padding: 1rem;
   margin-bottom: 0.75rem;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .taskCard p {
   color: var(--gray-100);
+  word-break: break-word;
 }
 
 .taskCard button {
   background: transparent;
   border: none;
+}
+.checkAndText {
+  display: flex;
+  gap: 0.75rem;
 }
