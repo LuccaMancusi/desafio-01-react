@@ -1,0 +1,43 @@
+.listContainer {
+  max-width: 46rem;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 3rem;
+}
+
+.listContainer header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.listContainer header p {
+  font-weight: 700;
+}
+
+.listContainer header .blue {
+  color: var(--blue);
+}
+
+.listContainer header .purple {
+  color: var(--purple);
+}
+
+.listContainer header .blue span {
+  background-color: var(--gray-400);
+  color: var(--gray-200);
+  padding: 0.125rem 0.5rem;
+  border-radius: 999px;
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+.listContainer header .purple span {
+  background-color: var(--gray-400);
+  color: var(--gray-200);
+  padding: 0.125rem 0.5rem;
+  border-radius: 999px;
+  display: inline-block;
+  margin-left: 0.5rem;
+}
