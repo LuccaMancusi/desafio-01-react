@@ -1,0 +1,35 @@
+.formContainer {
+  display: flex;
+  justify-content: center;
+  transform: translateY(-50%);
+}
+
+.addTaskForm {
+  width: 46rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0 1rem;
+  align-items: center;
+}
+
+.addTaskForm input {
+  width: 100%;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: var(--gray-500);
+  border: 1px solid black;
+  color: var(--gray-100);
+}
+
+.addTaskForm button {
+  padding: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  border-radius: 8px;
+  background: var(--blue-dark);
+  font-weight: 700;
+  color: var(--gray-100);
+  border: none;
+}
