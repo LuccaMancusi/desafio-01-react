@@ -10,8 +10,16 @@
 }
 
 .taskCard p {
-  color: var(--gray-100);
   word-break: break-word;
+}
+
+.unchecked {
+  color: var(--gray-100);
+}
+
+.checked {
+  color: var(--gray-300);
+  text-decoration: line-through;
 }
 
 .taskCard button {

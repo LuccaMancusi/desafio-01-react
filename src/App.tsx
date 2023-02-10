@@ -16,7 +16,7 @@ function App() {
     <>
       <Header />
       <Input onAddTask={addTask} />
-      <List />
+      <List taskList={taskList} />
     </>
   );
 }
